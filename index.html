@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Expense Tracker Pro</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+        <h1>💰 Expense Tracker Pro</h1>
+        <button id="toggle">🌙</button>
+    </div>
+
+    <div class="balance-box">
+        <h2>Balance</h2>
+        <h1 id="balance">₹0</h1>
+    </div>
+
+    <div class="summary">
+        <div class="income">Income ₹<span id="income">0</span></div>
+        <div class="expense">Expense ₹<span id="expense">0</span></div>
+    </div>
+
+    <form id="form">
+        <input type="text" id="text" placeholder="Description" required>
+        
+        <select id="category">
+            <option>Food</option>
+            <option>Shopping</option>
+            <option>Travel</option>
+            <option>Salary</option>
+        </select>
+
+        <input type="number" id="amount" placeholder="+income / -expense" required>
+        <input type="date" id="date" required>
+        <button>Add Transaction</button>
+    </form>
+
+    <button onclick="downloadCSV()">⬇ Export CSV</button>
+
+    <h3>History</h3>
+    <ul id="list"></ul>
+
+    <canvas id="chart"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
